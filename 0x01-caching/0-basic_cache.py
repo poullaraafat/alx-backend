@@ -6,14 +6,7 @@ from base_caching import BaseCaching
 
 class BasicCaching(BaseCaching):
     """ BasicCaching defines:
-      - constants of your caching system
-      - where your data are stored (in a dictionary)
-    """
-
-
-    def __init__(self):
-        """ Initialize BasicCaching by calling the parent class initializer """
-        super().__init__()
+      """
 
     def put(self, key, item):
         """ Add an item in the cache if key and item are not None """
