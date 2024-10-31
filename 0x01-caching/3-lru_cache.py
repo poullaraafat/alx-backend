@@ -24,7 +24,7 @@ class LRUCache(BaseCaching):
 
         if key is None or item is None:
             return
-        if  key in self.cache_data:
+        if key in self.cache_data:
             self.cache_data.pop(key)
         elif self.cache_data and len(self.cache_data) >=\
                 BaseCaching.MAX_ITEMS:
