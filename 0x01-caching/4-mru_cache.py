@@ -36,4 +36,8 @@ class MRUCache(BaseCaching):
     def get(self, key):
         '''return the value in `self.cache_data` linked to `key`
         '''
-        return self.cache_data.get(key, None)
+        if key is not None and key in self.cache_data:
+            self.cache_data.move_to_end(key)
+            return self.cache_data[key]
+        
+        return None
